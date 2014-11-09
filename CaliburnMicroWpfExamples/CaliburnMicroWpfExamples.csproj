@@ -74,6 +74,14 @@
     </Compile>
     <Compile Include="EventsExample\MainViewModel.cs" />
     <Compile Include="IShell.cs" />
+    <Compile Include="MasterDetailExample\DetailView.xaml.cs">
+      <DependentUpon>DetailView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDetailExample\DetailViewModel.cs" />
+    <Compile Include="MasterDetailExample\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterDetailExample\MainViewModel.cs" />
     <Compile Include="ShellViewModel.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -87,6 +95,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EventsExample\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MasterDetailExample\DetailView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MasterDetailExample\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,23 @@
+﻿<Window x:Class="CaliburnMicroWpfExamples.MasterDetailExample.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:local="clr-namespace:CaliburnMicroWpfExamples.MasterDetailExample"
+        Title="MainView" Height="300" Width="300">
+    <Grid Margin="3">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Grid.Column="1" Name="Add" Content="Add"/>
+
+        <ItemsControl Grid.Row="1" Name="Items">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:DetailView cal:Bind.Model="{Binding}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+    </Grid>
+</Window>

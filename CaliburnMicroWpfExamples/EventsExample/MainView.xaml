@@ -1,8 +1,8 @@
 ﻿<Window x:Class="CaliburnMicroWpfExamples.EventsExample.MainView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:cal="http://www.caliburnproject.org"
         xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        xmlns:cal="http://www.caliburnproject.org"
         Title="MainView" Height="220" Width="350">
     <Grid Margin="3">
         <StackPanel>

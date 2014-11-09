@@ -11,6 +11,7 @@
             </StackPanel>
             
             <Button Name="EventsExample" Content="Events Example"/>
+            <Button Name="MasterDetailExample" Content="Master-detail Example"/>
         </StackPanel>
     </Grid>
 </Window>

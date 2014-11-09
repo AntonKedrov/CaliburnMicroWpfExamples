@@ -40,5 +40,10 @@ namespace CaliburnMicroWpfExamples
         {
             _windowManager.ShowDialog(new EventsExample.MainViewModel());
         }
+
+        public void MasterDetailExample()
+        {
+            _windowManager.ShowDialog(new MasterDetailExample.MainViewModel());
+        }
     }
 }
