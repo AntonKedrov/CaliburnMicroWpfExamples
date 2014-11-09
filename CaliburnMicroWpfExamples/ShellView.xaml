@@ -4,11 +4,13 @@
         Height="350" Width="525" Title="CaliburnMicroWpfExamples.ShellView">
     <Grid Margin="3">
         <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
-            <Button Name="DialogExample" Content="Dialog Example"/>
             <StackPanel Orientation="Horizontal">
-                <TextBlock Text="Dialog Result:"/>
-                <TextBlock Name="DialogResult"/>
+                <Button Name="DialogExample" Content="Dialog Example"/>
+                <TextBlock Text="Result:"/>
+                <TextBlock Name="DialogExampleResult" MinWidth="50"/>
             </StackPanel>
+            
+            <Button Name="EventsExample" Content="Events Example"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -6,18 +6,18 @@ namespace CaliburnMicroWpfExamples
     {
         private readonly IWindowManager _windowManager;
 
-        private string _dialogResult;
+        private string _dialogExampleResult;
 
-        public string DialogResult
+        public string DialogExampleResult
         {
             get
             {
-                return _dialogResult;
+                return _dialogExampleResult;
             }
             set
             {
-                _dialogResult = value;
-                NotifyOfPropertyChange(() => DialogResult);
+                _dialogExampleResult = value;
+                NotifyOfPropertyChange(() => DialogExampleResult);
             }
         }
 
@@ -31,9 +31,14 @@ namespace CaliburnMicroWpfExamples
             bool? result = _windowManager.ShowDialog(new DialogExample.MainViewModel());
 
             if (result.HasValue)
-                DialogResult = result.Value.ToString();
+                DialogExampleResult = result.Value.ToString();
             else
-                DialogResult = "NULL";
+                DialogExampleResult = "NULL";
+        }
+
+        public void EventsExample()
+        {
+            _windowManager.ShowDialog(new EventsExample.MainViewModel());
         }
     }
 }

@@ -1,0 +1,62 @@
+﻿<Window x:Class="CaliburnMicroWpfExamples.EventsExample.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+        Title="MainView" Height="220" Width="350">
+    <Grid Margin="3">
+        <StackPanel>
+            <TextBlock Name="Result"/>
+            <Button Name="Time" Content="By convention"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="0" cal:Message.Attach="Time" Content="Short syntax"/>
+                <Button Grid.Column="1" cal:Message.Attach="[Event Click] = [Action Time]" Content="Normal syntax"/>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="0" Text="Format:"/>
+                <TextBox Grid.Column="1" Name="TimeFormat" HorizontalAlignment="Stretch"/>
+                <Button Grid.Column="2" Content="Full syntax">
+                    <i:Interaction.Triggers>
+                        <i:EventTrigger EventName="Click">
+                            <cal:ActionMessage MethodName="Time">
+                                <cal:Parameter Value="{Binding ElementName=TimeFormat, Path=Text}"/>
+                            </cal:ActionMessage>
+                        </i:EventTrigger>
+                    </i:Interaction.Triggers>
+                </Button>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Button Grid.Column="0" Grid.Row="0" cal:Message.Attach="[Event Click] = [Action MessageParam($eventArgs)]" Content="$eventArgs"/>
+                <Button Grid.Column="0" Grid.Row="1" cal:Message.Attach="[Event Click] = [Action MessageParam($dataContext)]" Content="$dataContext"/>
+                <Button Grid.Column="0" Grid.Row="2" cal:Message.Attach="[Event Click] = [Action MessageParam($source)]" Content="$source"/>
+                <Button Grid.Column="1" Grid.Row="0" cal:Message.Attach="[Event Click] = [Action MessageParam($view)]" Content="$view"/>
+                <Button Grid.Column="1" Grid.Row="1" cal:Message.Attach="[Event Click] = [Action MessageParam($executionContext)]" Content="$executionContext"/>
+                <Button Grid.Column="1" Grid.Row="2" cal:Message.Attach="[Event Click] = [Action MessageParam($this)]" Content="$this"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
