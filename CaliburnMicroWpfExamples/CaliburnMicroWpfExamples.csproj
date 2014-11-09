@@ -65,6 +65,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="DialogExample\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DialogExample\MainViewModel.cs" />
     <Compile Include="IShell.cs" />
     <Compile Include="ShellViewModel.cs" />
     <Compile Include="App.xaml.cs">
@@ -74,6 +78,10 @@
     <Compile Include="Views\DialogButtonsView.xaml.cs">
       <DependentUpon>DialogButtonsView.xaml</DependentUpon>
     </Compile>
+    <Page Include="DialogExample\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ShellView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

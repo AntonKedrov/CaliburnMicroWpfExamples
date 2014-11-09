@@ -2,7 +2,13 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Height="350" Width="525" Title="CaliburnMicroWpfExamples.ShellView">
-    <Grid>
-        
+    <Grid Margin="3">
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Button Name="DialogExample" Content="Dialog Example"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Dialog Result:"/>
+                <TextBlock Name="DialogResult"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
