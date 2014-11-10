@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace CaliburnMicroWpfExamples.DialogExample
+namespace CaliburnMicroWpfExamples.WindowManagerExample
 {
     /// <summary>
     /// Interaction logic for MainView.xaml

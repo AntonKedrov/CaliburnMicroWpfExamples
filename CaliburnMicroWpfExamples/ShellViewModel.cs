@@ -7,35 +7,15 @@ namespace CaliburnMicroWpfExamples
         private readonly IWindowManager _windowManager;
         private readonly IEventAggregator _eventAggregator;
 
-        private string _dialogExampleResult;
-
-        public string DialogExampleResult
-        {
-            get
-            {
-                return _dialogExampleResult;
-            }
-            set
-            {
-                _dialogExampleResult = value;
-                NotifyOfPropertyChange(() => DialogExampleResult);
-            }
-        }
-
         public ShellViewModel(IWindowManager windowManager, IEventAggregator eventAggregator)
         {
             _windowManager = windowManager;
             _eventAggregator = eventAggregator;
         }
 
-        public void DialogExample()
+        public void WindowManagerExample()
         {
-            bool? result = _windowManager.ShowDialog(new DialogExample.MainViewModel());
-
-            if (result.HasValue)
-                DialogExampleResult = result.Value.ToString();
-            else
-                DialogExampleResult = "NULL";
+            _windowManager.ShowDialog(new WindowManagerExample.MainViewModel(_windowManager));
         }
 
         public void EventsExample()
