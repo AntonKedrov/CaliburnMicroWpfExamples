@@ -69,6 +69,14 @@
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="DialogExample\MainViewModel.cs" />
+    <Compile Include="EventAggregatorExample\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventAggregatorExample\MainViewModel.cs" />
+    <Compile Include="EventAggregatorExample\SubscriberView.xaml.cs">
+      <DependentUpon>SubscriberView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EventAggregatorExample\SubscriberViewModel.cs" />
     <Compile Include="EventsExample\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -91,6 +99,14 @@
       <DependentUpon>DialogButtonsView.xaml</DependentUpon>
     </Compile>
     <Page Include="DialogExample\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventAggregatorExample\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EventAggregatorExample\SubscriberView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

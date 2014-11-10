@@ -5,6 +5,7 @@ namespace CaliburnMicroWpfExamples
     public class ShellViewModel : PropertyChangedBase, IShell
     {
         private readonly IWindowManager _windowManager;
+        private readonly IEventAggregator _eventAggregator;
 
         private string _dialogExampleResult;
 
@@ -21,9 +22,10 @@ namespace CaliburnMicroWpfExamples
             }
         }
 
-        public ShellViewModel(IWindowManager windowManager)
+        public ShellViewModel(IWindowManager windowManager, IEventAggregator eventAggregator)
         {
             _windowManager = windowManager;
+            _eventAggregator = eventAggregator;
         }
 
         public void DialogExample()
@@ -44,6 +46,11 @@ namespace CaliburnMicroWpfExamples
         public void MasterDetailExample()
         {
             _windowManager.ShowDialog(new MasterDetailExample.MainViewModel());
+        }
+
+        public void EventAggregatorExample()
+        {
+            _windowManager.ShowDialog(new EventAggregatorExample.MainViewModel(_windowManager, _eventAggregator));
         }
     }
 }
