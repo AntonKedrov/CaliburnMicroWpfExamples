@@ -13,6 +13,7 @@
                 <Button Name="ShowWindow" Content="Show Window"/>
                 <Button Name="CloseAllWindows" Content="Close All Windows"/>
             </StackPanel>
+            <Button Name="ShowPopup" Content="Show Popup"/>
         </StackPanel>
     </Grid>
 </Window>

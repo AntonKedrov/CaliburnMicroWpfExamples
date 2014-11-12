@@ -102,6 +102,10 @@
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowManagerExample\MainViewModel.cs" />
+    <Compile Include="WindowManagerExample\PopupView.xaml.cs">
+      <DependentUpon>PopupView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WindowManagerExample\PopupViewModel.cs" />
     <Page Include="EventAggregatorExample\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +155,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowManagerExample\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowManagerExample\PopupView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

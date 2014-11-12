@@ -54,5 +54,10 @@ namespace CaliburnMicroWpfExamples.WindowManagerExample
             _openWindows.Apply((x) => x.TryClose());
             _openWindows.Clear();
         }
+
+        public void ShowPopup()
+        {
+            _windowManager.ShowPopup(new PopupViewModel());
+        }
     }
 }
