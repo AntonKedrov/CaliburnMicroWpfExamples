@@ -57,10 +57,8 @@ namespace CaliburnMicroWpfExamples.EventAggregatorExample
         {
             if (close)
             {
-                foreach (var item in _openWindows)
-                {
-                    item.TryClose();
-                }
+                _openWindows.Apply((x) => x.TryClose());
+                _openWindows.Clear();
             }
         }
     }
