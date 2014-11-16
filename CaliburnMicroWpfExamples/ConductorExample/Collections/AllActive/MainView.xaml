@@ -1,0 +1,10 @@
+﻿<Window x:Class="CaliburnMicroWpfExamples.ConductorExample.Collections.AllActive.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:cal="http://www.caliburnproject.org"
+        xmlns:Collections="clr-namespace:CaliburnMicroWpfExamples.ConductorExample.Collections"
+        Title="MainView" Height="300" Width="350">
+    <Grid Margin="3">
+        <Collections:ScreenCollectionView cal:Bind.Model="{Binding}"/>
+    </Grid>
+</Window>

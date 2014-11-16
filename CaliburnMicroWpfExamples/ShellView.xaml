@@ -8,6 +8,9 @@
             <Button Name="EventsExample" Content="Events Example"/>
             <Button Name="MasterDetailExample" Content="Master-detail Example"/>
             <Button Name="EventAggregatorExample" Content="Event Aggregator Example"/>
+            <Button Name="ConductorExample" Content="Conductor&lt;T&gt;"/>
+            <Button Name="OneActiveExample" Content="Conductor&lt;T&gt;.Collection.OneActive"/>
+            <Button Name="AllActiveExample" Content="Conductor&lt;T&gt;.Collection.AllActive"/>
         </StackPanel>
     </Grid>
 </Window>

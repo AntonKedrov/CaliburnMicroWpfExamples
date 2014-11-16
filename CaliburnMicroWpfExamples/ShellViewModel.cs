@@ -32,5 +32,21 @@ namespace CaliburnMicroWpfExamples
         {
             _windowManager.ShowDialog(new EventAggregatorExample.MainViewModel(_windowManager, _eventAggregator));
         }
+
+        public void ConductorExample()
+        {
+            _windowManager.ShowDialog(new ConductorExample.MainViewModel());
+        }
+
+        public void OneActiveExample()
+        {
+            _windowManager.ShowDialog(new ConductorExample.Collections.OneActive.MainViewModel());
+        }
+
+        public void AllActiveExample()
+        {
+            _windowManager.ShowDialog(new ConductorExample.Collections.AllActive.MainViewModel());
+        }
+
     }
 }

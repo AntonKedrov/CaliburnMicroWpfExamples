@@ -65,6 +65,29 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppBootstrapper.cs" />
+    <Compile Include="ConductorExample\Collections\AllActive\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConductorExample\Collections\AllActive\MainViewModel.cs" />
+    <Compile Include="ConductorExample\Collections\OneActive\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConductorExample\Collections\OneActive\MainViewModel.cs" />
+    <Compile Include="ConductorExample\Collections\ScreenCollectionView.xaml.cs">
+      <DependentUpon>ScreenCollectionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConductorExample\Collections\UpTimeView.xaml.cs">
+      <DependentUpon>UpTimeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConductorExample\Collections\UpTimeViewModel.cs" />
+    <Compile Include="ConductorExample\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConductorExample\MainViewModel.cs" />
+    <Compile Include="ConductorExample\ScreenView.xaml.cs">
+      <DependentUpon>ScreenView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConductorExample\ScreenViewModel.cs" />
     <Compile Include="EventAggregatorExample\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -106,6 +129,30 @@
       <DependentUpon>PopupView.xaml</DependentUpon>
     </Compile>
     <Compile Include="WindowManagerExample\PopupViewModel.cs" />
+    <Page Include="ConductorExample\Collections\AllActive\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConductorExample\Collections\OneActive\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConductorExample\Collections\ScreenCollectionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConductorExample\Collections\UpTimeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConductorExample\MainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ConductorExample\ScreenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EventAggregatorExample\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,9 +238,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ScreensAndConductorsExample\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
