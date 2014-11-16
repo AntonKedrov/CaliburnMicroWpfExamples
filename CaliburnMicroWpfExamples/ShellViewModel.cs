@@ -48,5 +48,9 @@ namespace CaliburnMicroWpfExamples
             _windowManager.ShowDialog(new ConductorExample.Collections.AllActive.MainViewModel());
         }
 
+        public void CoroutinesExample()
+        {
+            _windowManager.ShowDialog(new CoroutinesExample.MainViewModel());
+        }
     }
 }

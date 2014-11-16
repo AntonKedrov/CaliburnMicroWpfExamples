@@ -88,6 +88,12 @@
       <DependentUpon>ScreenView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ConductorExample\ScreenViewModel.cs" />
+    <Compile Include="CoroutinesExample\MainView.xaml.cs">
+      <DependentUpon>MainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CoroutinesExample\MainViewModel.cs" />
+    <Compile Include="CoroutinesExample\Tasks\LoadData.cs" />
+    <Compile Include="CoroutinesExample\Tasks\ShowData.cs" />
     <Compile Include="EventAggregatorExample\MainView.xaml.cs">
       <DependentUpon>MainView.xaml</DependentUpon>
     </Compile>
@@ -150,6 +156,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ConductorExample\ScreenView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CoroutinesExample\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

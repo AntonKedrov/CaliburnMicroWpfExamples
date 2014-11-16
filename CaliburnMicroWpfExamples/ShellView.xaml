@@ -11,6 +11,7 @@
             <Button Name="ConductorExample" Content="Conductor&lt;T&gt;"/>
             <Button Name="OneActiveExample" Content="Conductor&lt;T&gt;.Collection.OneActive"/>
             <Button Name="AllActiveExample" Content="Conductor&lt;T&gt;.Collection.AllActive"/>
+            <Button Name="CoroutinesExample" Content="Coroutines Example"/>
         </StackPanel>
     </Grid>
 </Window>
